@@ -1,0 +1,183 @@
+h1 {
+    color: #147fa6;
+    text-align: center;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: aliceblue;
+    font-family:Arial, Helvetica, sans-serif;
+    background-image: url(hobbylandbg.jpg);
+}
+  
+  p.header {
+    font-weight: bold;
+    font-family: cursive;
+  }
+  p {
+    text-align: center;
+  }
+  form {
+    margin: auto;
+    width: 300px;
+    font-family: sans-serif;
+  }
+  
+  .navbar{
+    background:rgb(26, 25, 25);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .navbar__container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+  
+  .navbar__container img{
+    position: relative;
+    left: -100px;
+    top: 22px;
+    height: 50px;
+    width: 176px;
+    border-radius: 0%;
+  }
+  
+  .navbar__menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .navbar__item{
+    height: 80px;
+  }
+  
+  .navbar__links{
+    color:rgb(231, 231, 231);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+  }
+  
+  .navbar__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1 rem;
+    margin: 10px 10px;
+    width: 100%;
+  }
+  
+  .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #1767fa;
+    color: #fff;
+  }
+  
+  
+  .button:hover{
+    background: #124dbb;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar__links:hover{
+    color: #5590ff;
+    transition: all 0.3s ease;
+  }
+
+  
+.login{
+    width: 382px;
+    overflow: hidden;
+    position: relative;
+    margin:120px 0px 120px 620px;
+    padding: 150px 150px 100px 150px;
+    background:#147fa6;
+    border-radius: 15px;
+    color:rgb(233, 232, 232);
+    
+}
+.login img{
+    position: relative;
+    left: -50px;
+    top: -50px;
+
+}
+
+.intro{
+    text-align: center;
+}
+label{
+    color: rgb(233, 232, 232);
+    font-size: 17px;
+}
+#uname{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#psw{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#log{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: #147fa6;
+}
+#sign{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: rgb(233, 232, 232);
+}
+
+#forgot{
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: rgb(233, 232, 232);
+}
+span{
+    color: rgb(233, 232, 232);
+    font-size: 17px;
+}
+
