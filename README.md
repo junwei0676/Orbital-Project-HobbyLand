@@ -23,43 +23,43 @@ As an administrator who wants to enhance user experience, I want to be able to p
 
 Tech Stack :
 
-HTML
-CSS
-Javascript
-Firebase
-Python
+HTML <br/>
+CSS <br/>
+Javascript <br/>
+Firebase <br/>
+Python <br/>
 
 
-Development plan :
-3rd week of May: Finalized pitch for Orbital Lift-off
-4th week of May: Pick up necessary technologies - HTML, CSS, Javascript
-5th week of May: Created Mockup
-1st week of June: Finalized login,sign up page. Add to homepage (home screen, features tab)
-2nd week of June: Start working on the main portal (user interface, matchmaking function)
-3rd week of June onwards: Implement machine learning for accurate matchmaking (based on user’s details)
-4th week of June: Testing and debugging
-1st week of July: Implementation of peer teams’ suggestions
-2nd week of July: Finalize machine learning algorithm and home page, portal designs
-3rd week of July: Testing and debugging
+Development plan : <br/>
+3rd week of May: Finalized pitch for Orbital Lift-off <br/>
+4th week of May: Pick up necessary technologies - HTML, CSS, Javascript <br/>
+5th week of May: Created Mockup <br/>
+1st week of June: Finalized login,sign up page. Add to homepage (home screen, features tab) <br/>
+2nd week of June: Start working on the main portal (user interface, matchmaking function) <br/>
+3rd week of June onwards: Implement machine learning for accurate matchmaking (based on user’s details) <br/>
+4th week of June: Testing and debugging <br/>
+1st week of July: Implementation of peer teams’ suggestions <br/>
+2nd week of July: Finalize machine learning algorithm and home page, portal designs <br/>
+3rd week of July: Testing and debugging <br/>
 
 
 
 
 
-Milestone features:
+Milestone features:<br/>
 
-Milestone 1:
-Basic layout and design for login and sign up pages
-Basic login feature with default username and password
+Milestone 1:<br/>
+Basic layout and design for login and sign up pages<br/>
+Basic login feature with default username and password<br/>
 
-Milestone 2:
-Improved login and sign up function with email and password, connected to database
-Added profile page to input details
+Milestone 2:<br/>
+Improved login and sign up function with email and password, connected to database<br/>
+Added profile page to input details<br/>
 Added users page showcasing all registered users (this is very basic currently, to create a working prototype to allow users to find matches manually as we are still in the process of implementing matchmaking)
 
-Milestone 3:
-Matchmaking system using machine learning algorithm
-Further improve display of user details
+Milestone 3:<br/>
+Matchmaking system using machine learning algorithm<br/>
+Further improve display of user details<br/>
 
 
 Link to web app (for best experience use desktop/laptop!)  : https://hobbyland-ace89.web.app
