@@ -26,6 +26,8 @@ Tech Stack :
 HTML
 CSS
 Javascript
+Firebase
+Python
 
 
 Development plan :
@@ -33,9 +35,66 @@ Development plan :
 4th week of May: Pick up necessary technologies - HTML, CSS, Javascript
 5th week of May: Created Mockup
 1st week of June: Finalized login,sign up page. Add to homepage (home screen, features tab)
-2nd week of June: Start working on the main portal (user interface, chat function, matchmaking function)
-3rd week of June: Implement machine learning for accurate matchmaking (based on user’s details)
+2nd week of June: Start working on the main portal (user interface, matchmaking function)
+3rd week of June onwards: Implement machine learning for accurate matchmaking (based on user’s details)
 4th week of June: Testing and debugging
 1st week of July: Implementation of peer teams’ suggestions
 2nd week of July: Finalize machine learning algorithm and home page, portal designs
 3rd week of July: Testing and debugging
+
+
+
+
+
+Milestone features:
+
+Milestone 1:
+Basic layout and design for login and sign up pages
+Basic login feature with default username and password
+
+Milestone 2:
+Improved login and sign up function with email and password, connected to database
+Added profile page to input details
+Added users page showcasing all registered users (this is very basic currently, to create a working prototype to allow users to find matches manually as we are still in the process of implementing matchmaking)
+
+Milestone 3:
+Matchmaking system using machine learning algorithm
+Further improve display of user details
+
+
+Link to web app (for best experience use desktop/laptop!)  : https://hobbyland-ace89.web.app
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Work in progress
+
+We are currently working on a user matching system using elements of machine learning. We will build a linear regression model to predict and assign a value (Hobbyscore) to every user, which is then used to match users with similar scores.
+
+Firstly, users will fill in values from 1 to 10 for these categories:
+Interest in the hobby
+Commitment level (availability)
+Age
+
+
+
+We have then created a test data set where Hobbyscore is calculated based on our own formula
+
+
+(Example dataset in csv file)
