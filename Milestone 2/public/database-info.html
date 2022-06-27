@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="datastyles.css" />
+    <script src="carousel.js" defer></script>
+  </head>
+  <body>
+    <div class="sign">
+      <img
+        src="hobbyland-logo-cropped.png">
+    <ul id="list"></ul>
+  </body>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+    import {
+      getDatabase,
+      ref,
+      get,
+      query,
+      onValue,
+      child,
+    } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCbDXkOEqUNsNV6MDMskNrmAdfMaCelL8Y",
+
+      authDomain: "profile-page-7dea0.firebaseapp.com",
+
+      databaseURL:
+        "https://profile-page-7dea0-default-rtdb.asia-southeast1.firebasedatabase.app",
+
+      projectId: "profile-page-7dea0",
+
+      storageBucket: "profile-page-7dea0.appspot.com",
+
+      messagingSenderId: "438211567082",
+
+      appId: "1:438211567082:web:fb3df970fe75e4de816693",
+
+      measurementId: "G-MK86PK3232",
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    var userNo = 0;
+
+    function addItemsToList(name, bio, tele) {
+      var ul = document.getElementById("list");
+      var header = document.createElement("h2");
+
+      var _name = document.createElement("li");
+      var _bio = document.createElement("li");
+      var _tele = document.createElement("li");
+
+      header.innerHTML = "User-" + ++userNo;
+
+      _name.innerHTML = "Name: " + name;
+      _bio.innerHTML = "Bio: " + bio;
+      _tele.innerHTML = "Telegram handle: " + tele;
+
+      ul.appendChild(header);
+      ul.appendChild(_name);
+      ul.appendChild(_bio);
+      ul.appendChild(_tele);
+    }
+
+    function FetchAllData() {
+      const dbref = ref(database);
+      get(child(dbref, "users")).then((snapshot) => {
+        snapshot.forEach((ChildSnapshot) => {
+          let name = ChildSnapshot.val().name;
+          let bio = ChildSnapshot.val().bio;
+          let tele = ChildSnapshot.val().tele;
+          addItemsToList(name, bio, tele);
+        });
+      });
+    }
+
+    window.onload(FetchAllData());
+  </script>
+</html>
