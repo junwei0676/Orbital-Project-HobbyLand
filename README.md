@@ -65,36 +65,32 @@ Further improve display of user details<br/>
 Link to web app (for best experience use desktop/laptop!)  : https://hobbyland-ace89.web.app
 
 
+Milestone 3
 
+Hobbyscore system
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Work in progress
-
-We are currently working on a user matching system using elements of machine learning. We will build a linear regression model to predict and assign a value (Hobbyscore) to every user, which is then used to match users with similar scores.
+In order to match users better, we have created a hobbyscore system designed to use machine learning elements to predict a score based on certain inputs.
 
 Firstly, users will fill in values from 1 to 10 for these categories:
 Interest in the hobby
 Commitment level (availability)
 Age
 
+Users with similar inputs will then obtain a similar score which would simplify matching.
+
+Based on the dataset we have created, we implemented a linear regression algorithm to predict and display a score. (Hobbyscore calculator : https://hobbyland.herokuapp.com/)
 
 
-We have then created a test data set where Hobbyscore is calculated based on our own formula
 
 
-(Example dataset in csv file)
+
+
+
+
+
+
+
+
+
+
+
