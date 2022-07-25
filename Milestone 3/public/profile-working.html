@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile-style.css" />
+  </head>
+  <body>
+    <div class="profile">
+      <div class="profile-content">
+        <form>
+          <h1>Hello, Set up your profile now!</h1>
+          <br />
+          <div class="form-content">
+            <h3>Upload a picture of yourself</h3>
+            <input
+              type="file"
+              class="form-input"
+              id="file"
+              onchange="chooseFile(event)"
+            />
+          </div>
+          <br />
+          <div class="form-content">
+            <h3>Name</h3>
+            <input
+              type="text"
+              class="form-input"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+            />
+          </div>
+          <br />
+          <div class="form-content">
+            <h3>Bio</h3>
+            <textarea
+              rows="10"
+              cols="50"
+              placeholder="Tell us a little bit about yourself..."
+              id="bio"
+            ></textarea>
+          </div>
+          <div class="form-content">
+            <h3>
+              Hobbyscore (Please obtain your Hobbyscore from our
+              <a href="https://hobbyland.herokuapp.com/">
+                Hobbyscore calculator</a
+              >)
+            </h3>
+            <input
+              type="text"
+              class="form-input"
+              name="score"
+              id="score"
+              placeholder="Enter your Hobbyscore"
+            />
+          </div>
+          <div class="form-content">
+            <h3>Telegram</h3>
+            <input
+              type="text"
+              class="form-input"
+              name="tele"
+              id="tele"
+              placeholder="Enter your telegram handle"
+            />
+          </div>
+          <br />
+          <button
+            type="button"
+            id="submitData"
+            name="submitData"
+            class="registerbtn"
+          >
+            Submit
+          </button>
+        </form>
+        <hr />
+        Click <a href="database-info.html"> here </a> to view other profiles
+      </div>
+    </div>
+  </body>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+    import {
+      getDatabase,
+      set,
+      ref,
+      update,
+    } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCbDXkOEqUNsNV6MDMskNrmAdfMaCelL8Y",
+
+      authDomain: "profile-page-7dea0.firebaseapp.com",
+
+      databaseURL:
+        "https://profile-page-7dea0-default-rtdb.asia-southeast1.firebasedatabase.app",
+
+      projectId: "profile-page-7dea0",
+
+      storageBucket: "profile-page-7dea0.appspot.com",
+
+      messagingSenderId: "438211567082",
+
+      appId: "1:438211567082:web:fb3df970fe75e4de816693",
+
+      measurementId: "G-MK86PK3232",
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    submitData.addEventListener("click", (e) => {
+      var name = document.getElementById("name").value;
+      var bio = document.getElementById("bio").value;
+      var score = document.getElementById("score").value;
+      var tele = document.getElementById("tele").value;
+
+      // const newKey = push(child(ref(database), 'users')).key;
+
+      set(ref(database, "users/" + name), {
+        name: name,
+        bio: bio,
+        score: score,
+        tele: tele,
+      })
+        .then(() => {
+          // Data saved successfully!
+          alert("data submitted");
+          window.location.replace("/database-info.html");
+        })
+        .catch((error) => {
+          // The write failed...
+          alert(error);
+        });
+    });
+  </script>
+</html>

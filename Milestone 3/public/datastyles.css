@@ -1,0 +1,33 @@
+html,body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+
+  .content {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sign{
+    width: 2000px;
+    height: 1000px;
+    overflow: hidden;
+    margin: auto;
+    margin:20 0 0 450px;
+    padding: 150px 150px 100px 150px;
+    background:#147fa6;
+    border-radius: 15px;
+    color:rgb(233, 232, 232);
+}
+
+.sign img{
+    position: relative;
+    left: -50px;
+    top: -50px;
+}
+
